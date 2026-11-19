@@ -111,10 +111,10 @@ android {
 
 
     defaultConfig {
-        // CI 的原子随身听兼容包只覆盖 applicationId；namespace、Kotlin 包路径和
+        // CI 可通过 md3ApplicationId 覆盖 applicationId；namespace、Kotlin 包路径和
         // MethodChannel 名保持不变，避免复制或改写原生代码。
         applicationId = providers.gradleProperty("md3ApplicationId")
-            .getOrElse("com.md3music.md3music")
+            .getOrElse("com.kugou.android")
         minSdk = flutter.minSdkVersion
         targetSdk = 35
         versionCode = flutter.versionCode
